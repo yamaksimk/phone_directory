@@ -80,6 +80,9 @@ def main():
                 continue
             print(*read_file(file_name))
         elif command == 'c':
+            if not exists(file_name):
+                print('Сначала создайте файл')
+                continue
             copy_string(file_name2)
             print('Скопированные строки:')
             print(read_file2(file_name2))
