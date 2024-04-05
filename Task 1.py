@@ -44,7 +44,7 @@ def write_file(file_name, lst):
 
 def copy_string(file_name, file_name2):
     string = list(map(int ,input('Введите номер строки/ номера строк (через пробел): ').split()))
-    with open(file_name) as file_name, open(file_name2, 'w') as file_name2:
+    with open(file_name) as file_name, open(file_name2, 'w', encoding='utf-8') as file_name2:
         for n, line in enumerate(file_name):
             if n == 0:
                 file_name2.write(line)
